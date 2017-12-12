@@ -19,6 +19,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1/edit
   def edit
+    @portfolio_item = Portfolio.find(params [:id])
   end
 
   # POST /blogs
