@@ -1,19 +1,64 @@
 <div class="app-card-container">
-    <div class="card">
-        <h1>About Me</h1>
+  <div class="card">
+    <h1>About Me</h1>
+    
+    <hr>
+    
+    <div class ="row">
+      <div class ="col-md-4">
+      <%= image_tag "profile.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
+      </div>
+      
+      <div class ="col-md-8">
+        <p>Find me in app/views/pages/about.html.erb</p>
         
-        <hr>
-        
-        <div class ="row">
-            <div class ="col-md-4">
-                <%= image_tag "profile.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded="false"
+            aria-controler="jobHistory"
+          >
+            Job History
+          </button>
+
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+          >
+            Education
+          </button>
+        </p>
+
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-block">
+              Job 1
             </div>
-                
-            <div class ="col-md-8">
-            <p>Find me in app/views/pages/about.html.erb</p>
-            
-            
+            <div class="card card-block">
+              Job 2
             </div>
-        </div>
+          </div>
+
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              Math
+            </div>
+            <div class="card card-block">
+              Spelling
+            </div>
+            <div class="card card-block">
+              Science
+            </div>
+          </div>
+        </p>
+      </div>
     </div>
+  </div>
 </div>
